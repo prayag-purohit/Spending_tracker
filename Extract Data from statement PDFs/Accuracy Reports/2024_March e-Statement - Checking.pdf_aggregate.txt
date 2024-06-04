@@ -1,0 +1,21 @@
+E:\Data analytics projects\Financial Tracker\Extract Data from statement PDFs\Statements\2024_March e-Statement - Checking.pdf Accuracy Report
+Number of tables: 6
+
+Table 0 Report:
+{'accuracy': 99.42, 'whitespace': 42.86, 'order': 1, 'page': 1}
+========================================
+Table 1 Report:
+{'accuracy': 97.67, 'whitespace': 54.76, 'order': 2, 'page': 1}
+========================================
+Table 2 Report:
+{'accuracy': 97.01, 'whitespace': 49.76, 'order': 1, 'page': 2}
+========================================
+Table 3 Report:
+{'accuracy': 97.44, 'whitespace': 57.54, 'order': 2, 'page': 2}
+========================================
+Table 4 Report:
+{'accuracy': 95.56, 'whitespace': 47.5, 'order': 1, 'page': 3}
+========================================
+Table 5 Report:
+{'accuracy': 100.0, 'whitespace': 50.0, 'order': 1, 'page': 4}
+========================================

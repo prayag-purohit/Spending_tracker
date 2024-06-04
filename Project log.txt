@@ -1,0 +1,44 @@
+This project aims to fine-tune a pre-trained model for categorizing bank transactions. The model will be trained on a dataset consisting of transaction descriptions (notes) and their corresponding categories.
+
+Data and Features:
+
+The dataset consists of approximately 300-400 rows of text data with corresponding labels for transaction categories.
+We will utilize the Trainer API from Hugging Face Transformers for training efficiency.
+
+Combined Text: This feature combines the transaction note with the amount information (e.g., "Customer Transfer Cr. INVESTMENT PROCEEDS: $678.64").
+
+Due to the small dataset size, we will closely monitor training to avoid overfitting and may consider techniques like early stopping.
+
+My Setup:
+Small model with 110M parameters
+300-400 rows of data
+GPU with 6GB VRAM
+
+-I am training with a class imbalance. I have performed some processing. The x values look like this: Customer Transfer Cr. INVESTMENT PROCEEDS: $678.64 (all in lower case). There are 21 classes with heavy class balance. In the first few iterations of training, I am ignoring it. 
+	-I tried to address the class imbalance with oversampling. 
+-I have used a pre-trained model on transaction data. I have relatively few rows of data so leveraged one with transactions. That model is based on pytorch and is trained on BERT.
+	-The pre-trained transaction model's classification head is hard to remove. So I decided to use DistilBERT model for classification. The next stop is using a Text-	Generation model to do the task.
+-Data augmentation is very tough since it is random transaction data; conventional methods do not work, and techniques specific to transaction data are hard to imitate, because it requires a lot of knowledge. 
+	-No augmentation use.
+-Training using the trainer API. Since the training data Im working with is already given to the wire, I am comfortable compromising it. In one second branch I shall use a manual training loop. 
+	-Haven't created the training loop yet. 
+	-5 of the first layers were freezed, resulting in a significant faster training. 
+
+Error analysis until now: 
+I gave it a few rows.
+I see that it does not reflect the categories I trained it on. It returns the categories given in the initial pertaining. (I am using a pretrained model). It may be trained on that data but I want the model to fit my labels. 
+23rd march - The model was ran through March month data. It generated labels with 91% accuracy. With only a few mistakes. 
+
+
+Solutions : 
+Oversampling the class imbalances. Done
+Freeze early layers. Done
+Early stopping.
+
+
+The way forward: 
+-Using optimizers to improve performance
+-training text-generation models to compare it with distilBert
+-Removing the classification head from the pretrained. 
+
+

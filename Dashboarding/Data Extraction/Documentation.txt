@@ -1,0 +1,46 @@
+Overview:
+This Python script automates the processing of monthly financial data stored as CSV files in specified directories. It includes separate functionalities for processing credit card statements and current account statements. The script reads each CSV file, standardizes the data format, adds metadata, appends the processed data to a master CSV file, and organizes the processed files into separate directories for archival purposes. Error handling is implemented to manage potential issues during file operations.
+
+Credit Card Data Processing:
+
+Directory Path: E:/Data analytics projects/Financial Tracker/Dashboarding/Monthly Statements/Credit
+File Ignored: 'Credit processed master.csv'
+Functionality:
+Filters CSV files within the directory.
+Processes each CSV file:
+Sets column names.
+Converts the date column to datetime format.
+Adds a column indicating the transaction type.
+Appends the processed data to a master CSV file.
+Moves the processed file to a 'Finished_processing' directory.
+Provides feedback on the processing status for each file.
+Current Account Data Processing:
+
+Directory Path: E:/Data analytics projects/Financial Tracker/Dashboarding/Monthly Statements/Current
+File Ignored: 'Current processed master.csv'
+Functionality:
+Filters CSV files within the directory.
+Processes each CSV file:
+Concatenates columns to create a transaction description.
+Drops unnecessary columns.
+Renames columns.
+Reorders columns.
+Converts the date column to datetime format.
+Adds a column indicating the account type.
+Appends the processed data to a master CSV file.
+Moves the processed file to a 'Finished_processing' directory.
+Provides feedback on the processing status for each file.
+Usage:
+
+Ensure Python and required libraries (Pandas, NumPy) are installed.
+Modify the directory_path variable to specify the directory containing the monthly financial data.
+Run the script.
+Processed data will be appended to respective master CSV files, and original files will be moved to 'Finished_processing' directories.
+Note:
+
+Ensure file paths are correctly specified, and necessary permissions are granted for file operations.
+Review error messages for any issues encountered during processing.
+
+----
+
+Both the files are to be run with the master data processing file. 

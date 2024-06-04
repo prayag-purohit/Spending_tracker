@@ -1,0 +1,18 @@
+E:\Data analytics projects\Financial Tracker\Statements\2023_November e-Statement - Checking.pdf Accuracy Report
+Number of tables: 5
+
+Table 0 Report:
+{'accuracy': 99.16, 'whitespace': 42.86, 'order': 1, 'page': 1}
+========================================
+Table 1 Report:
+{'accuracy': 97.44, 'whitespace': 54.76, 'order': 2, 'page': 1}
+========================================
+Table 2 Report:
+{'accuracy': 97.86, 'whitespace': 56.91, 'order': 1, 'page': 2}
+========================================
+Table 3 Report:
+{'accuracy': 97.11, 'whitespace': 57.04, 'order': 1, 'page': 3}
+========================================
+Table 4 Report:
+{'accuracy': 96.98, 'whitespace': 48.57, 'order': 1, 'page': 4}
+========================================

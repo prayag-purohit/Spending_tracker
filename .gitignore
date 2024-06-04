@@ -1,0 +1,6 @@
+FinTrackerenv/
+*.env
+*.csv
+Extract Data from statement PDFs/Statements/
+Model training/output/** 
+**/Archive

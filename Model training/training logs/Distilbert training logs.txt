@@ -1,0 +1,71 @@
+args = TrainingArguments(
+    output_dir='./output',  # Directory to store checkpoints and other training outputs
+    overwrite_output_dir=True, 
+    num_train_epochs=5,  # Number of training epochs
+    per_device_train_batch_size=4,  # Batch size per device (GPU)
+    save_total_limit=2,  # Keep only the last 2 checkpoints
+    save_strategy='epoch',
+    evaluation_strategy="epoch",  # Evaluation is done (and logged) every `eval_steps`
+    logging_strategy="epoch", # Number of update steps between two evaluations
+    logging_dir='./logs',  # Directory to store logs
+    lr_scheduler_type="linear",  # Learning rate scheduler type
+    
+)
+
+trainer = Trainer(
+    model=model,
+    args=args,
+    train_dataset=train_dataset,
+    eval_dataset=test_dataset,
+    tokenizer = tokenizer,
+    compute_metrics=compute_metrics
+)
+
+
+---
+{'eval_loss': 0.7969716191291809,
+ 'eval_accuracy': 0.7567567567567568,
+ 'eval_precision': 0.7555555555555554,
+ 'eval_recall': 0.7311111111111112,
+ 'eval_f1': 0.7170370370370371,
+ 'eval_runtime': 1.7189,
+ 'eval_samples_per_second': 21.525,
+ 'eval_steps_per_second': 2.909,
+ 'epoch': 5.0}
+---
+
+
+ 20%|██        | 83/415 [00:27<01:26,  3.85it/s]{'loss': 0.9268, 'grad_norm': 19.12451171875, 'learning_rate': 4e-05, 'epoch': 1.0}
+e:\Data analytics projects\Financial Tracker\FinTrackerenv\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+ 20%|██        | 83/415 [00:29<01:26,  3.85it/s]<class 'transformers.trainer_utils.EvalPrediction'>
+{'eval_loss': 1.0351004600524902, 'eval_accuracy': 0.6756756756756757, 'eval_precision': 0.6340740740740741, 'eval_recall': 0.6644444444444445, 'eval_f1': 0.6028245828245828, 'eval_runtime': 1.6264, 'eval_samples_per_second': 22.75, 'eval_steps_per_second': 3.074, 'epoch': 1.0}
+ 40%|████      | 166/415 [00:57<01:04,  3.85it/s]{'loss': 0.6306, 'grad_norm': 4.949434280395508, 'learning_rate': 3e-05, 'epoch': 2.0}
+e:\Data analytics projects\Financial Tracker\FinTrackerenv\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+ 40%|████      | 166/415 [00:58<01:04,  3.85it/s]<class 'transformers.trainer_utils.EvalPrediction'>
+{'eval_loss': 0.9256970286369324, 'eval_accuracy': 0.7567567567567568, 'eval_precision': 0.7444444444444444, 'eval_recall': 0.7311111111111112, 'eval_f1': 0.7081481481481482, 'eval_runtime': 1.6067, 'eval_samples_per_second': 23.029, 'eval_steps_per_second': 3.112, 'epoch': 2.0}
+ 60%|██████    | 249/415 [01:26<00:43,  3.83it/s]{'loss': 0.5038, 'grad_norm': 1.031240463256836, 'learning_rate': 2e-05, 'epoch': 3.0}
+e:\Data analytics projects\Financial Tracker\FinTrackerenv\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+ 60%|██████    | 249/415 [01:28<00:43,  3.83it/s]<class 'transformers.trainer_utils.EvalPrediction'>
+{'eval_loss': 0.8508186936378479, 'eval_accuracy': 0.7297297297297297, 'eval_precision': 0.7222222222222221, 'eval_recall': 0.708888888888889, 'eval_f1': 0.6748148148148149, 'eval_runtime': 1.6135, 'eval_samples_per_second': 22.931, 'eval_steps_per_second': 3.099, 'epoch': 3.0}
+ 80%|████████  | 332/415 [01:56<00:21,  3.81it/s]{'loss': 0.4253, 'grad_norm': 2.7612881660461426, 'learning_rate': 1e-05, 'epoch': 4.0}
+e:\Data analytics projects\Financial Tracker\FinTrackerenv\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+ 80%|████████  | 332/415 [01:57<00:21,  3.81it/s]Checkpoint destination directory ./output\checkpoint-332 already exists and is non-empty. Saving will proceed but saved results may be invalid.
+<class 'transformers.trainer_utils.EvalPrediction'>
+{'eval_loss': 0.8066428303718567, 'eval_accuracy': 0.7567567567567568, 'eval_precision': 0.7555555555555554, 'eval_recall': 0.7311111111111112, 'eval_f1': 0.7170370370370371, 'eval_runtime': 1.5961, 'eval_samples_per_second': 23.181, 'eval_steps_per_second': 3.133, 'epoch': 4.0}
+100%|██████████| 415/415 [02:25<00:00,  3.83it/s]{'loss': 0.368, 'grad_norm': 10.591322898864746, 'learning_rate': 0.0, 'epoch': 5.0}
+e:\Data analytics projects\Financial Tracker\FinTrackerenv\Lib\site-packages\sklearn\metrics\_classification.py:1497: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+
+100%|██████████| 415/415 [02:27<00:00,  3.83it/s]Checkpoint destination directory ./output\checkpoint-415 already exists and is non-empty. Saving will proceed but saved results may be invalid.
+<class 'transformers.trainer_utils.EvalPrediction'>
+{'eval_loss': 0.7969716191291809, 'eval_accuracy': 0.7567567567567568, 'eval_precision': 0.7555555555555554, 'eval_recall': 0.7311111111111112, 'eval_f1': 0.7170370370370371, 'eval_runtime': 1.6062, 'eval_samples_per_second': 23.035, 'eval_steps_per_second': 3.113, 'epoch': 5.0}
+100%|██████████| 415/415 [02:28<00:00,  2.80it/s]{'train_runtime': 148.1999, 'train_samples_per_second': 11.1, 'train_steps_per_second': 2.8, 'train_loss': 0.5708873978580337, 'epoch': 5.0}
+
