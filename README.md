@@ -52,7 +52,7 @@ The goal of this project is to:
 
 - Python 3.x
 - Jupyter Notebook
-- Required Python libraries (listed in `requirements.txt`)
+- Required Python libraries: Transformers, sklearn, torch, camelot, imblearn, subprocesses, os, pandas, numpy, Matplotlib
 
 ### Installation
 
