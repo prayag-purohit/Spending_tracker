@@ -1,6 +1,9 @@
-Personal note: You should know that I had very little knowledge of machine learning and deep learning before starting this project. I had to go through a lot of content and courses (Thank you [Andrew Ng]([url](https://www.youtube.com/watch?v=vStJoetOxJg&list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI))!) while implementing this project, and I hope it can help, and inspire others. As I mentioned, I am relatively new to the tech industry and data science, so constructive criticism would be greatly appreciated. 
+Personal note: You should know that I had very little knowledge of machine learning and deep learning before starting this project. I had to go through a lot of content and courses 
+(Thank you [Andrew Ng](https://www.youtube.com/watch?v=vStJoetOxJg&list=PLkDaE6sCZn6FNC6YRfRQc_FbeQrF8BwGI) and [folks at Google BI specialization](https://www.coursera.org/professional-certificates/google-business-intelligence)!) 
+while implementing this project, and I hope it can help, and inspire others. As I mentioned, I am relatively new to the tech industry and data science, so constructive criticism would be greatly appreciated. 
 
 # Spending Tracker
+
 
 ## Overview
 
