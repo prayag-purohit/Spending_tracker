@@ -17,6 +17,7 @@ https://github.com/user-attachments/assets/76295cfc-1dce-4766-be97-80276ff94d63
 
 The **Spending Tracker** project leverages AI to categorize financial transactions, aiming to inspire the tech community to integrate AI into daily tasks. By fine-tuning the DistilBERT model, I achieved a multiclass classification system that sorts transactions into 20 distinct categories. The open-source model ensures data privacy as it operates locally, not requiring internet connectivity for processing personal bank data. The beauty of fine-tuning is that you can get personized result. I tested the trained model with my data and then compared its performance against an online service provider ([Wallet]([url](https://web.budgetbakers.com)) by budget bakers). My model performed 15% better than the OSP. 
 
+![Dataflow](https://github.com/user-attachments/assets/4bad30cd-85e6-48a3-a63f-3fe9baa34832)
 
 
 ## Goal
